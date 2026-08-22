@@ -969,8 +969,8 @@ a {
   }
 
   .point-service{
-    cursor: pointer;
     gap: 25px;
+    padding-bottom: 1rem;
   }
 
   .services-content{
