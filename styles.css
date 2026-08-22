@@ -970,6 +970,7 @@ a {
 
   .point-service{
     cursor: pointer;
+    gap: 25px;
   }
 
   .services-content{
@@ -979,5 +980,10 @@ a {
 
   .group-services{
     min-width: 5rem;
+  }
+
+  .point-service span{
+    width: 30px;
+    height: 30px;
   }
 }
