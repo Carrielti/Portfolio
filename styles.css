@@ -336,34 +336,39 @@ a {
 .content-technology {
   width: 100%;
   overflow: hidden;
-  /*&:hover .technologies {
-    animation-play-state: paused;
-  };*/
+
   background-color: rgb(0, 0, 17);
   margin-bottom: 1rem;
 }
 
-.technologies {
+.technology-group {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+
+  width: max-content;
+
   gap: 3.25rem;
-  padding-top: 1vw;
-  will-change: transform;
+
   animation: scrolling 15s linear infinite;
-  padding-right: 20px;
+  will-change: transform;
 }
 
-.technologies img {
-  width: 6rem;
+.technology-group img {
   height: auto;
+  flex-shrink: 0;
+}
+
+.technology-group .point {
+  flex-shrink: 0;
 }
 
 @keyframes scrolling {
-  0% {
-    transform: translateX(0%);
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+
+  to {
+    transform: translateX(calc(-50% - 1.625rem));
   }
 }
 
@@ -803,6 +808,64 @@ a {
   display: block;
 }
 
+/* -------------------------
+---- FOOTER --------
+-------------------------- */
+
+footer{
+  background-color: #0A0A0A;
+}
+
+.container-contact{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+.group-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.group-contact img{
+  max-width: 12rem;
+}
+
+.group-contact a{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.text-contact h4{
+  display: flex;
+  font-size:5rem;
+}
+
+.social-media{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.divisor{
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: #B1AEAE;
+  margin:10px auto;
+}
+
+.mark{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 3rem 0;
+  color: #B1AEAE;
+}
+
 @media (max-width: 900px) {
   .content-header {
     padding: 1rem 1.5rem;
@@ -826,18 +889,8 @@ a {
     font-size: 0.9rem;
   }
 
-  .technologies {
-    gap: 1rem;
+  .technology-group {
     animation: scrolling 15s linear infinite;
-  }
-
-  @keyframes scrolling {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-107%);
-    }
   }
 
   .content-about {
@@ -916,9 +969,23 @@ a {
   .text-projects {
     font-size: 1rem;
   }
+  .container-contact{
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .group-contact{
+    align-items: center;
+  }
+
+  .contact-logo{
+    align-items: center;
+  }
 }
 
 @media (max-width: 600px) {
+  .section-title{
+    font-size:2.2rem
+  }
   .content-header {
     flex-direction: column;
   }
@@ -950,18 +1017,8 @@ a {
     max-width: 300px;
   }
 
-  .technologies {
-    gap: 0.2rem;
-    animation: scrolling 15s linear infinite;
-  }
-
-  @keyframes scrolling {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-152%);
-    }
+  .technologies-stack{
+    font-size:1rem
   }
 
   .arrow {
@@ -985,5 +1042,9 @@ a {
   .point-service span{
     width: 30px;
     height: 30px;
+  }
+
+  .mark h4{
+    font-size: 0.9rem;
   }
 }
