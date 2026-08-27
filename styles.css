@@ -943,10 +943,6 @@ footer{
 
   }
 
-  .container-button-project {
-    flex-direction: column;
-    align-items: center;
-  }
   .content-about {
     width: 90%;
     padding: 3rem 0;
@@ -986,6 +982,7 @@ footer{
   .text-contact{
     text-align: center;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -1043,6 +1040,11 @@ footer{
 
   .group-services{
     min-width: 5rem;
+  }
+
+  .container-button-project {
+    flex-direction: column;
+    align-items: center;
   }
 
   .point-service span{
