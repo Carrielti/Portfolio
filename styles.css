@@ -652,6 +652,10 @@ a {
   text-align: center;
 }
 
+#skills .section-title{
+  padding-top:2rem;
+}
+
 .content-skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -842,11 +846,6 @@ footer{
   color: white;
 }
 
-.text-contact h4{
-  display: flex;
-  font-size:5rem;
-}
-
 .social-media{
   display: flex;
   flex-direction: column;
@@ -982,6 +981,10 @@ footer{
 
   .contact-logo{
     align-items: center;
+  }
+
+  .text-contact{
+    text-align: center;
   }
 }
 
